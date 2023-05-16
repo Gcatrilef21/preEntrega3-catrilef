@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Courgette&family=Dancing+Script:wght@400;600&family=Delicious+Handrawn&family=Inconsolata:wght@300;600&family=Mali:ital,wght@0,300;1,300&family=Pacifico&family=Parisienne&family=Saira+Condensed:wght@300;400&family=Satisfy&family=Tangerine&family=Ysabeau:ital,wght@0,200;1,1;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Paleta de colores
+$color1: #A12A31;
+$color2: #BC292D;
+$color3: #CE3426;
+$color4: #DF3E1E;
+$color5: #E75414;
+$color6: #F07012;
+$color7: #F88C0F;
+$color8: #F3D180;
+$color9: #FFF;
+
+// Letras
+$fonttype1:'Ysabeau',
+sans-serif;
+$fonttype2:'Dancing Script',
+cursive;
+$fonttype3:'Parisienne',
+cursive;
+$fonttype4:'Courgette',
+cursive;
+$fonttype5:'Tangerine',
+cursive;
+
+.navbar {
+    background-image: repeating-linear-gradient(to bottom, $color5, $color4, $color2);
+}
+
+.imglogo {
+    float: left;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+    .logo {
+        color: $color9;
+        font-family: $fonttype2;
+        text-transform: uppercase;
+        font-size: 30px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span {
+        padding-left: 5px;
+        text-transform: capitalize;
+    }
+
+    .logo:hover {
+        color: $color7;
+        transform: scale(1.1);
+        transition: all 0.9s;
+        text-shadow: 0 0 8px #000;
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid $color9 !important;
+    font-size: smaller;
+    width: auto;
+    height: 35px;
+    border-radius: 30%;
+}
+
+.navbar-nav {
+    font-size: 20px;
+    text-transform: capitalize;
+
+    a {
+        font-family: $fonttype4;
+        color: $color8 !important;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px !important;
+    }
+
+    a:hover {
+        color: $color1 !important;
+        background-color: $color7 !important;
+        transform: translate(-50px) !important;
+        transition: all 1.5s;
+    }
+}
+
+h1 {
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-family: $fonttype2;
+    font-size: 40px;
+    margin-bottom: 0;
+    color: $color8;
+    text-shadow: 0 0 7px #00000060;
+    text-transform: capitalize;
+    background-image: repeating-linear-gradient(to bottom, $color2, $color3, $color2);
+}
+
+h2 {
+    height: 55px;
+    padding: 5px;
+    margin-bottom: 0;
+    color: $color9;
+    font-family: $fonttype5;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    background-image: repeating-linear-gradient(to bottom, $color5, $color6, $color7);
+}
+
+@mixin size ($height, $width, $bgcolor) {
+    height: $height;
+    width: $width;
+    background-color: $bgcolor;
+}
+
+.row {
+    height: 600px;
+
+    .img-prod {
+        @include size (auto, 100%, $color2);
+        background-image: url(./img/Chee7.jpg);
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .text-prod {
+        color: $color9;
+        background-image: repeating-linear-gradient(to bottom, $color6, $color7);
+
+        h3 {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 40px;
+            font-family: $fonttype5;
+            padding-top: 20px;
+        }
+
+        .prin-parr {
+            text-align: justify;
+            text-transform: capitalize;
+            font-size: 15px;
+            font-family: $fonttype4;
+        }
+
+        .prin-parr::first-letter {
+            color: $color8;
+            font-family: $fonttype2;
+            font-size: 25px;
+        }
+
+        .button {
+            background-color: $color6;
+            padding: 10px;
+            border-radius: 250px;
+
+            a {
+                color: $color9;
+                text-transform: lowercase;
+                font-family: $fonttype4;
+            }
+        }
+    }
+
+}
+
+
+.footer {
+    @include size(120px, 100%, $color1);
+    padding: 15px;
+    color: $color8;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $fonttype1;
+    font-weight: lighter;
+
+    a {
+        color: $color8;
+        font-size: 30px;
+        letter-spacing: 15px;
+    }
+
+    a:hover {
+        color: #003049;
+    }
+}
+
+.up {
+    @include size(40px, 40px, $color5);
+    color: $color9;
+    position: fixed;
+    right: 35px;
+    bottom: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    border-radius: 50%;
+}
+
+.up:hover {
+    color: $color5;
+    background-color: $color9;
+    font-weight: bolder;
+}
+
+//nosotros
+
+.row {
+    height: 600px;
+
+    .img-nos {
+        @include size (600px, 100%, $color2);
+        background-image: url(./img/Chee13.jpg);
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .nos-parr {
+        @include size (auto, 100%, none);
+        padding: 20px;
+        font-size: 30px;
+        color: $color9;
+        text-align: center;
+        text-shadow: 0 0 7px #000;
+        font-weight: lighter;
+        text-transform: capitalize;
+    }
+
+
+    a {
+        color: $color2;
+        padding: 10px 20px ;
+        margin-left: 500px;
+        font-size: 30px;
+        text-transform: lowercase;
+        font-family: $fonttype4;
+        background-color: $color7;
+        border-radius: 15%;
+    }
+
+}
+
+// productos
+
+.productos {
+    width: 100%;
+    height: auto;
+    background-color: $color7;
+    padding: 20px;
+
+    .prod-parr {
+        height: 70px;
+        color: $color3;
+        font-size: 30px;
+        font-family: $fonttype2;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .amarican-img,
+    .bluec-img,
+    .brie-img,
+    .cambert-img,
+    .cheddar-img,
+    .colby.img,
+    .edam-img,
+    .feta-img {
+        height: 300px;
+        width: 100%;
+        border: 2px solid $color4;
+    }
+
+    @each $quesos in amarican,
+    bluec,
+    brie,
+    cambert,
+    cheddar,
+    colby,
+    edam,
+    feta {
+        .#{$quesos}-img {
+            background-image: url("img/#{$quesos}.jpg");
+            background-size: cover;
+            background-position: 80%;
+            filter: grayscale(100%);
+        }
+    }
+
+    @each $quesos in amarican,
+    bluec,
+    brie,
+    cambert,
+    cheddar,
+    colby,
+    edam,
+    feta {
+        .#{$quesos}-img:hover {
+            filter: grayscale(0%);
+            transform: scale(0.8);
+            transition: all 0.7s;
+        }
+    }
+
+    h4 {
+        height: 40px;
+        text-align: center;
+        color: $color9;
+        font-size: 50px;
+        font-family: $fonttype5;
+        text-transform: capitalize;
+        text-shadow: 0 0 15px #000;
+        padding: 20px;
+    }
+
+}
+
+//novedades
+.sec-nos {
+    @include size (auto, 100%, $color2);
+    // display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    .card-nosotros {
+        @include size (none, 100%, $color2);
+        min-height: 350px;
+        border: 3px solid $color4;
+
+
+        .pizzeria-img,
+        .delivery-img,
+        .variedades-img {
+            @include size (150px, 100%, $color2);
+        }
+
+        @each $nove in pizzeria,
+        delivery,
+        variedades {
+            .#{$nove}-img {
+                background-image: url("img/#{$nove}.jpg");
+                background-size: cover;
+                background-position: center;
+                filter: saturate(50%)
+            }
+        }
+
+        h3 {
+            font-size: 35px;
+            color: $color7;
+            font-family: $fonttype4;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h4 {
+            font-size: 18px;
+            color: $color9;
+            font-family: $fonttype1;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            color: $color8;
+            font-family: $fonttype1;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .productos {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 200px 200px;
+    }
+
+    .nosotros {
+        display: flex;
+    }
+
+    .img-nos,
+    .desc-nos {
+        width: 50%;
+    }
+}
